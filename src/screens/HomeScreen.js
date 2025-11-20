@@ -8,10 +8,10 @@ const HomeScreen = ({navigation}) => {
  title="Go to Details"
  onPress={() => navigation.navigate('Details', {
  itemId: 42,
- itemName: 'Sample Item',
+ itemName: 'Item 1',
  })}
  />
- <Button
+ <Button className="Button"
  title="Go to Profile"
  onPress={() => navigation.navigate('Profile')}
  />
@@ -24,6 +24,7 @@ const styles = StyleSheet.create({
  alignItems: 'center',
  justifyContent: 'center',
  padding: 20,
+ gap: 20
  },
  title: {
  fontSize: 24,

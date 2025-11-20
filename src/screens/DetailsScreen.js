@@ -9,14 +9,15 @@ const DetailsScreen = ({route, navigation}) => {
  <Text style={styles.text}>Item Name: {itemName}</Text>
  <Button title="Go Back" onPress={() => navigation.goBack()} />
  <Button
- title="Update Params"
+ title="Choose Random Number"
  onPress={() =>
  navigation.setParams({
- itemName: 'Updated Item',
+ itemName: 'Random Number = '+Math.floor(Math.random() * 1000),
  })
  }
  />
  </View>
+
  );
 };
 const styles = StyleSheet.create({
@@ -25,6 +26,7 @@ const styles = StyleSheet.create({
  alignItems: 'center',
  justifyContent: 'center',
  padding: 20,
+ gap: 20,
  },
  title: {
  fontSize: 24,
